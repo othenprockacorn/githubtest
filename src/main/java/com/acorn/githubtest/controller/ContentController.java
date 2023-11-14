@@ -8,7 +8,6 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
-
 @RestController
 @RequestMapping("api/content")
 public class ContentController {
@@ -29,6 +28,5 @@ public class ContentController {
         return repository.findByID(id).orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Content not found"));
 
     }
-
 
 }
