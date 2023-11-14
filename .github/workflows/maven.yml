@@ -15,8 +15,15 @@ on:
     branches: [ "master" ]
 
 jobs:
+
+
+
   build:
 
+    permissions: write-all
+    name: build
+    environment: dev
+    # needs: pre-pkr
     runs-on: ubuntu-latest
 
     steps:
