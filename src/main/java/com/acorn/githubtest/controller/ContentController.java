@@ -5,7 +5,6 @@ import com.acorn.githubtest.repository.ContentCollectionRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-
 import java.util.List;
 
 @RestController
@@ -26,7 +25,6 @@ public class ContentController {
     @GetMapping("/{id}")
     public Content findById(@PathVariable Integer id){
         return repository.findByID(id).orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Content not found"));
-
     }
 
 }
